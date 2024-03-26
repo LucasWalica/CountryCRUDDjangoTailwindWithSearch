@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+    
+    <form method="POST">
+        <center>
+            {% csrf_token %}
+            <div>Nombre</div>
+            {{form.nombre}}
+            <div>Fecha de fundación</div>
+            {{form.fechaFundacion}}
+            <div>Tipo de Gobierno</div>
+            {{form.tipoDeGobierno}}
+            <div>Población</div>
+            {{form.poblacion}}
+            <div>Continente del País</div>
+            {{form.continente}}
+            <div>PIB</div>
+            {{form.PIB}}
+            <div>Nombre de moneda</div>
+            {{form.moneda}}
+            <br>
+            <button type="update">Update</button>
+        </center>
+    </form>
+{% endblock content %}

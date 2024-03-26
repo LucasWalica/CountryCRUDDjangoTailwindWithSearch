@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    
+    <form method="POST">
+        {% csrf_token %}
+        <br>
+        <center>
+            <h1>Are you sure of deleting the data of this country?</h1>
+            <br>
+            <button type="delete">Delete</button>
+        </center>
+    </form>
+{% endblock content %}

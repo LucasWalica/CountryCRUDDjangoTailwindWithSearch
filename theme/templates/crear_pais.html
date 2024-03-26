@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <br>
+        <center>
+            <div>Nombre: <br> {{form.nombre}}</div>
+            <div>Fecha de fundación:  <br> {{form.fechaFundacion}}</div>
+            <div>Tipo de Gobierno:  <br> {{form.tipoDeGobierno}}</div>
+            <div>Población: <br> {{form.poblacion}}</div>
+            <div>Continente del País: <br> {{form.continente}}</div>
+            <div>PIB:  <br> {{form.PIB}}</div>
+            <div>Nombre de moneda: <br>{{form.moneda}}</div>
+            <br>
+            <button type="submit">Create</button>
+        </center>
+    </form>
+{% endblock content %}

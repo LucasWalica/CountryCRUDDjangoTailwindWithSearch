@@ -1,0 +1,24 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>{% block title %}Paises{% endblock %}</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{% tailwind_css %}
+	</head>
+
+	<body class="bg-gray-50 font-mono leading-normal tracking-normal">
+		<div class="bg-emerald-500 py-2 px-2 grid grid-cols-2 text-center">
+			<div><a href="{% url 'paises' %}">Paises</a></div>
+			<div><a href="{% url 'home' %}">Home</a></div>
+		</div>
+
+			{% block buscador %}
+			{% endblock buscador %}
+
+			{% block content %}
+			{% endblock %}
+	</body>
+</html>
