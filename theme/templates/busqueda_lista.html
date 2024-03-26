@@ -9,7 +9,7 @@
             <div>
                 <input  class="rounded-md mx-2 my-2" placeholder="buscar" type="text" name="query" value="{{request.GET.query}}">
                 
-                <button type="submit" class="rounded-md border-emerald-200 border-2 text-emerald-400 px-2 bg-emerald-700">Buscar</button>
+                <button type="submit" class="rounded-md border-emerald-200 border-2 text-emerald-400 px-2 bg-emerald-700 hover:border-emerald-800 hover:text-emerald-800 hover:bg-emerald-400">Buscar</button>
             </div>
         </form>
     </center>
@@ -25,7 +25,7 @@
 {% block content %}
     <div class="grid  tablet:grid-cols-1 laptop::grid-cols-2 desktop:grid-cols-2">
     {% for pais in countryList %}
-        <div class="text-emerald-950 mx-2 my-2 border-emerald-900 border-2 px-2 py-2 rounded-lg">
+        <div class="text-emerald-950 mx-2 my-2 border-emerald-900 border-2 px-2 py-2 rounded-lg  bg-emerald-50">
             <div>Nombre: {{pais.nombre}}</div>
             <div>Fecha de fundación: {{pais.fechaFundacion}} </div>
             <div>Tipo de Gobierno:  {{pais.tipoDeGobierno}}</div>
@@ -33,9 +33,10 @@
             <div>Continente del País: {{pais.continente}}</div>
             <div>PIB: {{pais.PIB}}</div>
             <div>Nombre de moneda:  {{pais.moneda}}</div>
-            <center class="border-2"> 
-                <a href="{% url "delete" pk=pais.pk %}">Borrar</a>
-                <a href="{% url "update" pk=pais.pk %}">Update</a>
+            <center class="mx-8 mt-2 mb-2"> 
+                <a href="{% url "detalle" pk=pais.pk %}" class="bg-emerald-600 text-emerald-100 px-4 py-1 rounded-md hover:text-emerald-950 hover:bg-emerald-400">Ver</a>
+                <a href="{% url "delete" pk=pais.pk %}" class="bg-emerald-600 text-emerald-100 px-4 py-1 rounded-md hover:text-emerald-950 hover:bg-emerald-400">Borrar</a>
+                <a href="{% url "update" pk=pais.pk %}" class="bg-emerald-600 text-emerald-100 px-4 py-1 rounded-md hover:text-emerald-950 hover:bg-emerald-400">Update</a>
             </center>
         </div>  
     {% endfor %}

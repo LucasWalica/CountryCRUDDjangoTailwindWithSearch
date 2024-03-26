@@ -5,9 +5,9 @@
         {% csrf_token %}
         <br>
         <center>
-            <h1>Are you sure of deleting the data of this country?</h1>
+            <h1>¿Seguro que quieres borrar los datos de {{object.nombre}}?</h1>
             <br>
-            <button type="delete">Delete</button>
+            <button type="delete" class="bg-emerald-600 text-emerald-100 px-4 py-1 rounded-md hover:text-emerald-950 hover:bg-emerald-400">Delete</button>
         </center>
     </form>
 {% endblock content %}

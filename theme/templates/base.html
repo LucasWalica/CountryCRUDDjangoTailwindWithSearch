@@ -9,10 +9,10 @@
 		{% tailwind_css %}
 	</head>
 
-	<body class="bg-gray-50 font-mono leading-normal tracking-normal">
+	<body class="bg-emerald-100 font-mono leading-normal tracking-normal">
 		<div class="bg-emerald-500 py-2 px-2 grid grid-cols-2 text-center">
-			<div><a href="{% url 'paises' %}">Paises</a></div>
-			<div><a href="{% url 'home' %}">Home</a></div>
+			<div><a class="hover:bg-emerald-400 px-4 py-1 rounded-md" href="{% url 'paises' %}">Paises</a></div>
+			<div><a class="hover:bg-emerald-400 px-4 py-1 rounded-md"  href="{% url 'home' %}">Home</a></div>
 		</div>
 
 			{% block buscador %}
